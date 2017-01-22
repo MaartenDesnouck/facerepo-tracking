@@ -7,6 +7,6 @@ function findGrensTest(page, grens, BUFFER) {
 
     for (var i = 24; i > 0; i--) {
         lijst2 = split(lijst[i], ">");
-        // setValue(i,0,BUFFER,lijst2[23].substring(6,lijst2[23].length-4));
+        //GoogleSheet.setValue(i,0,BUFFER,lijst2[23].substring(6,lijst2[23].length-4));
     }
 }

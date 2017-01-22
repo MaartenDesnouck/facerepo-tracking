@@ -1,5 +1,5 @@
-function updateMax(HISTORY, META, row, date, kolom) {
-    var page = getValue(0, kolom, HISTORY);
+function updateMax(HISTORY, META, row, date, column) {
+    var page = GoogleSheet.getValue(0, column, HISTORY);
     var currentPage = page;
     var offset = 0;
     var found = false;
@@ -27,12 +27,12 @@ function updateMax(HISTORY, META, row, date, kolom) {
     }
 
     // schrijf bovenaan kolom welke pagina dat was
-    setValue(0, kolom, HISTORY, currentPage);
+    GoogleSheet.setValue(0, column, HISTORY, currentPage);
 
     // reken uit welke positie dat is
     var rank = 24 * (currentPage - 1) + onPage;
 
     // zet positie op juiste row
-    setValue(row, kolom, HISTORY, rank);
+    GoogleSheet.setValue(row, column, HISTORY, rank);
 
 }

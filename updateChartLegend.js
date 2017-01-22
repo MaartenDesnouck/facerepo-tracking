@@ -1,12 +1,12 @@
-function updateChartLegend(HISTORY, PERCENT, row, kolom) {
+function updateChartLegend(HISTORY, PERCENT, row, column) {
 
     // history
-    var waarde = getValue(row, kolom, HISTORY);
-    var naam = getValue(2, kolom, HISTORY);
-    setValue(3, kolom, HISTORY, '[' + kolom + '] ' + naam + ' (' + waarde + ')');
+    var waarde = GoogleSheet.getValue(row, column, HISTORY);
+    var naam = GoogleSheet.getValue(2, column, HISTORY);
+    GoogleSheet.setValue(3, column, HISTORY, '[' + column + '] ' + naam + ' (' + waarde + ')');
 
     // percentage
-    waarde = getValue(row, kolom, PERCENT);
-    naam = getValue(2, kolom, PERCENT);
-    setValue(3, kolom, PERCENT, '[' + kolom + '] ' + naam + ' (' + waarde + ')');
+    waarde = GoogleSheet.getValue(row, column, PERCENT);
+    naam = GoogleSheet.getValue(2, column, PERCENT);
+    GoogleSheet.setValue(3, column, PERCENT, '[' + column + '] ' + naam + ' (' + waarde + ')');
 }
