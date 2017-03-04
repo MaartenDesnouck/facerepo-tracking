@@ -1,5 +1,5 @@
 function updateHistory(HISTORY, META, row, date, column) {
-    var page = getValue(0, column, HISTORY);
+    var page = GoogleSheet.getValue(0, column, HISTORY);
     var currentPage = page;
     var offset = 0;
     var found = false;

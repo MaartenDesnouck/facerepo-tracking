@@ -1,10 +1,10 @@
 function updateGrens(HISTORY, META, row, date, column) {
-    var page = GoogleSheet.getValue(0, kolom, HISTORY);
+    var page = GoogleSheet.getValue(0, column, HISTORY);
     var currentPage = page;
     var offset = 0;
     var found = false;
     var onPage = 0;
-    var grens = GoogleSheet.getValue(1, kolom, HISTORY);
+    var grens = GoogleSheet.getValue(1, column, HISTORY);
 
     // find op welke pagina hij te vinden is;
     while (!found && offset < 10) {
