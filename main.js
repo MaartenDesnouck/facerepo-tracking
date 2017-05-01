@@ -2,7 +2,7 @@ var rankingNamen = [];
 var rankingScores = [];
 
 function main() {
-    var DATA = '1l9yVXgBg-etNtzsybBVY3nfsiDIwWGayJXBKdCZ5W4Y';
+    var DATA = PropertiesService.getScriptProperties().getProperty('sheetId');
     var data = SpreadsheetApp.openById(DATA);
 
     var BUFFER = data.getSheets()[0];
