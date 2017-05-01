@@ -34,7 +34,7 @@ function main() {
         updateChartLegend(HISTORY, PERCENT, row, kolom);
     }
 
-    GoogleSheet.setValue(0, 1, META, Utilities.formatDate(new Date(), timezone,
+    setValue(0, 1, META, Utilities.formatDate(new Date(), timezone,
         "yyyy-MM-dd' at 'HH:mm:ss' (" + timezone + ")'"));
 
 }

@@ -1,10 +1,10 @@
 function updateGrens(HISTORY, META, row, date, column) {
-    var page = GoogleSheet.getValue(0, column, HISTORY);
+    var page = getValue(0, column, HISTORY);
     var currentPage = page;
     var offset = 0;
     var found = false;
     var onPage = 0;
-    var grens = GoogleSheet.getValue(1, column, HISTORY);
+    var grens = getValue(1, column, HISTORY);
 
     // find op welke pagina hij te vinden is;
     while (!found && offset < 10) {
@@ -30,25 +30,25 @@ function updateGrens(HISTORY, META, row, date, column) {
 
     if (offset < 10) {
         // schrijf bovenaan kolom welke pagina dat was
-        GoogleSheet.setValue(0, column, HISTORY, currentPage);
+        setValue(0, column, HISTORY, currentPage);
 
         // reken uit welke positie dat is
         var rank = 24 * (currentPage - 1) + onPage;
 
         // zet positie op juiste row
-        GoogleSheet.setBackgroundColor(row, column, HISTORY, "white");
-        GoogleSheet.setValue(row, column, HISTORY, rank);
+        setBackgroundColor(row, column, HISTORY, "white");
+        setValue(row, column, HISTORY, rank);
 
-        // GoogleSheet.setValue(row+1,kolom,HISTORY,onPage);
-        // GoogleSheet.setValue(row+2,kolom,HISTORY,offset);
+        // setValue(row+1,kolom,HISTORY,onPage);
+        // setValue(row+2,kolom,HISTORY,offset);
 
     } else {
         // reken uit welke positie dat is
         var rank = 24 * (page);
 
         // zet positie op juiste row
-        GoogleSheet.setBackgroundColor(row, column, HISTORY, "orange");
-        GoogleSheet.setValue(row, column, HISTORY, rank);
+        setBackgroundColor(row, column, HISTORY, "orange");
+        setValue(row, column, HISTORY, rank);
 
     }
 }
