@@ -18,7 +18,7 @@ function main() {
     var timezone = 'GMT';
 
     var date = Utilities.formatDate(progstart, timezone, 'dd-MM-yyyy');
-    var row = dayDiff(STARTDATUM, progstart) + 1;
+    var row = time_dayDiff(STARTDATUM, progstart) + 1;
 
     updateHistory(HISTORY, META, row, date, 1);
     updateChartLegend(HISTORY, PERCENT, row, 1);
